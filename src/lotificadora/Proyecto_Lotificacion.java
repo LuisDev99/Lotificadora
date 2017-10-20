@@ -4,8 +4,13 @@ import java.util.Scanner;
 
 public class Proyecto_Lotificacion {
 	Scanner scn = new Scanner(System.in);
-	public static Terreno[][] terrenos = new Terreno[5][5];
+	public static Terreno[][] terrenos;
 	static int totalTotal = 0, totalOcupadas = 0, totalVacios = 0;
+	
+	
+	public Proyecto_Lotificacion(){
+		terrenos = new Terreno[5][5];
+	}
 	
 	public static boolean reservarTerreno(int fila, int columna){
 		if(terrenos[fila][columna] != null){
